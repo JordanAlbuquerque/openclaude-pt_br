@@ -64,7 +64,7 @@ macOS / Linux:
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
 export OPENAI_BASE_URL=http://localhost:11434/v1
-export OPENAI_MODEL=qwen/qwen3.6-plus:free
+export OPENAI_MODEL=qwen2.5-coder:7b
 
 openclaude
 ```
@@ -74,7 +74,7 @@ Windows PowerShell:
 ```powershell
 $env:CLAUDE_CODE_USE_OPENAI="1"
 $env:OPENAI_BASE_URL="http://localhost:11434/v1"
-$env:OPENAI_MODEL="qwen/qwen3.6-plus:free"
+$env:OPENAI_MODEL="qwen2.5-coder:7b"
 
 openclaude
 ```
