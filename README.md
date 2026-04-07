@@ -15,7 +15,7 @@ Use APIs compatíveis com OpenAI, Gemini, GitHub Models, Codex, Ollama, Atomic C
 - Use a extensão integrada do VS Code para integração de execução e suporte a temas
 
 ## Início Rápido
-### Verifiquem se o Node está instalado caso não instalem..
+### Verifiquem se o Node está instalado caso não esteja instalem.. https://nodejs.org/pt-br/download
 ```
 node --version
 npm --version
