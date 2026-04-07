@@ -79,12 +79,12 @@ $env:OPENAI_MODEL="qwen/qwen3.6-plus:free"
 openclaude
 ```
 ### Configuração com OPENROUTER+VSCODE
-
+```
 $env:CLAUDE_CODE_USE_OPENAI="1"
 $env:OPENAI_BASE_URL="https://openrouter.ai/api/v1"
 $env:OPENAI_API_KEY="API OPEN ROUTER"
 $env:OPENAI_MODEL="qwen/qwen3.6-plus:free"
-
+```
 
 ## Guias de Configuração
 
