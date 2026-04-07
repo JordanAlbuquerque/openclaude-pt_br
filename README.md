@@ -174,7 +174,7 @@ Cliente CLI:
 ```bash
 npm run dev:grpc:cli
 ```
-## Pra rodar Local
+## Construção do código-fonte e desenvolvimento local
   
 Build do Código
 
