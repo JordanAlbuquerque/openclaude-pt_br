@@ -15,8 +15,13 @@ Use APIs compatíveis com OpenAI, Gemini, GitHub Models, Codex, Ollama, Atomic C
 - Use a extensão integrada do VS Code para integração de execução e suporte a temas
 
 ## Início Rápido
-
-### Instalar
+### Verifiquem se o Node está instalado caso não instalem..
+```
+node --version
+npm --version
+```
+Depois 
+### Instalar OpenClaude
 
 ```bash
 npm install -g @gitlawb/openclaude
