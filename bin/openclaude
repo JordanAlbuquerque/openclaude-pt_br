@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+/**
+ * OpenClaude — Claude Code com qualquer LLM
+ *
+ * Se dist/cli.mjs existe (já compilado), executa ele.
+ * Caso contrário, avisa ao usuário para compilar primeiro ou usar `bun run dev`.
+ */
+
+// Importa a função existsSync para verificar se um arquivo existe no sistema de arquivos
+import { existsSync } from 'fs'
+// Importa join para juntar caminhos e dirname para obter o diretório de um caminho
+import { join, dirname } from 'path'
+// Importa funções para converter URLs de arquivo em caminhos e vice-versa
+import { fileURLToPath, pathToFileURL } from 'url'
+
+// Obtém o diretório do arquivo atual convertendo a URL do módulo
+const __dirname = dirname(fileURLToPath(import.meta.url))
+// Constrói o caminho para o arquivo compilado dist/cli.mjs (um nível acima de bin/)
+const distPath = join(__dirname, '..', 'dist', 'cli.mjs')
+
+// Verifica se o arquivo compilado existe
+if (existsSync(distPath)) {
+  // Se existe, importa e executa o CLI compilado
+  await import(pathToFileURL(distPath).href)
+} else {
+  // Se não existe, exibe uma mensagem de erro com instruções para o usuário
+  console.error(`
+  openclaude: dist/cli.mjs não encontrado.
+
+  Compile primeiro:
+    bun run build
+
+  Ou execute diretamente com Bun:
+    bun run dev
+
+  Veja README.md para instruções de configuração.
+`)
+  // Encerra o processo com código de erro 1
+  process.exit(1)
+}
